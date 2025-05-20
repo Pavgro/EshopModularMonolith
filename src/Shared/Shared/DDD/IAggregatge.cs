@@ -1,13 +1,13 @@
-﻿namespace Shared.DDD
-{
-    public interface IAggregatge<T> : IEntity<T>, IAggregatge
-    {
-        
-    }
+﻿namespace Shared.DDD;
 
-    public interface IAggregatge : IEntity
-    {
-        IReadOnlyList<IDomainEvent> DomainEvents { get; }
-        IDomainEvent[] ClearDomainEvents();
-    }
+public interface IAggregatge<T> : IEntity<T>, IAggregatge
+{
+
 }
+
+public interface IAggregatge : IEntity
+{
+    IReadOnlyList<IDomainEvent> DomainEvents { get; }
+    IDomainEvent[] ClearDomainEvents();
+}
+
